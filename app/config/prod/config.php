@@ -195,7 +195,7 @@ return [
         },
         FilterProvider::class => function (Container $c) {
           return new FilterProvider(
-              $c->get(ConfigBuilderInterface::class)
+              $c->get(\FeeCalcApp\Calculator\Filter\FilterCreator::class)
           );
         },
     ];
